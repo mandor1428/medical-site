@@ -1,5 +1,5 @@
 <?php
-$uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH) ?: '/';
+$uri = rawurldecode(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH) ?: '/');
 $root = __DIR__;
 $requested = realpath($root . $uri);
 
