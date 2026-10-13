@@ -3,17 +3,21 @@ $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH) ?: '/';
 $root = __DIR__;
 $requested = realpath($root . $uri);
 
-if ($uri === '/favicon.ico') {
-    http_response_code(204);
-    return true;
-}
-
 if ($uri !== '/' && $requested && str_starts_with($requested, $root) && is_file($requested)) {
+    if (strtolower(pathinfo($requested, PATHINFO_EXTENSION)) === 'html') {
+        header('Content-Type: text/html; charset=UTF-8');
+        header('Cache-Control: no-store, no-cache, must-revalidate, max-age=0');
+        header('Pragma: no-cache');
+        readfile($requested);
+        return true;
+    }
     return false;
 }
 
 if ($uri === '/' || $uri === '/index.html') {
     header('Content-Type: text/html; charset=UTF-8');
+    header('Cache-Control: no-store, no-cache, must-revalidate, max-age=0');
+    header('Pragma: no-cache');
     readfile($root . '/index.html');
     return true;
 }
@@ -41,6 +45,8 @@ $routes = [
 $normalized = rtrim($uri, '/') ?: '/';
 if (isset($routes[$normalized]) && is_file($root . '/' . $routes[$normalized])) {
     header('Content-Type: text/html; charset=UTF-8');
+    header('Cache-Control: no-store, no-cache, must-revalidate, max-age=0');
+    header('Pragma: no-cache');
     readfile($root . '/' . $routes[$normalized]);
     return true;
 }

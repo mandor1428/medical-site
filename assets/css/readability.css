@@ -1,0 +1,929 @@
+:root {
+  --type-copy: 17px;
+  --type-dense: 16px;
+  --type-meta: 15px;
+  --type-legal: 12px;
+  --type-leading: 1.46;
+}
+
+body {
+  font-size: var(--type-copy);
+  line-height: var(--type-leading);
+}
+
+/* Release the last screenshot-height caps after increasing the type scale. */
+.hero {
+  height: auto !important;
+  min-height: 390px !important;
+}
+
+.mepa-page .page-hero {
+  height: auto !important;
+  min-height: 370px !important;
+}
+
+.contact-hero {
+  height: auto !important;
+  min-height: 312px !important;
+}
+
+.faq-hero {
+  height: auto !important;
+  min-height: 280px !important;
+}
+
+.about-page .page-hero {
+  height: auto !important;
+  min-height: 220px !important;
+}
+
+.subcategory-panel {
+  min-height: 118px;
+  overflow: visible !important;
+}
+
+/* Shared controls and supporting navigation. */
+.btn,
+.primary-button,
+.secondary-button,
+.section-link,
+.inline-heading > a {
+  font-size: var(--type-meta) !important;
+}
+
+input,
+select,
+textarea {
+  font-size: var(--type-dense) !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  font-size: var(--type-dense) !important;
+}
+
+.field label,
+.checkbox-line,
+.upload-box {
+  font-size: var(--type-meta) !important;
+  line-height: 1.38 !important;
+}
+
+.upload-box small,
+.excel-drop small,
+.success-detail small {
+  font-size: var(--type-meta) !important;
+  line-height: 1.35 !important;
+}
+
+.field input,
+.field select {
+  min-height: 44px !important;
+}
+
+.field textarea {
+  min-height: 86px !important;
+}
+
+/* Shared footer: larger than the old screenshot-scaled text. */
+.footer-company,
+.company-copy,
+.footer-company p,
+.company-copy address,
+.inner-footer__grid > div p {
+  font-size: var(--type-meta) !important;
+  line-height: 1.48 !important;
+}
+
+.footer-inner h2,
+.inner-footer h2,
+.portrait-frame .inner-footer h2,
+.catalog-page .inner-footer h2,
+.category-page .inner-footer h2,
+.solutions-page .inner-footer h2 {
+  font-size: var(--type-meta) !important;
+}
+
+.footer-column a,
+.inner-footer p,
+.inner-footer a,
+.portrait-frame .inner-footer p,
+.portrait-frame .inner-footer a,
+.catalog-page .inner-footer p,
+.catalog-page .inner-footer a,
+.category-page .inner-footer p,
+.category-page .inner-footer a,
+.solutions-page .inner-footer p,
+.solutions-page .inner-footer a {
+  font-size: var(--type-meta) !important;
+  line-height: 1.48 !important;
+}
+
+.footer-legal,
+.inner-footer__legal,
+.portrait-frame .inner-footer__legal,
+.product-footer .inner-footer__legal,
+.catalog-page .inner-footer__legal,
+.category-page .inner-footer__legal,
+.solutions-page .inner-footer__legal {
+  font-size: var(--type-legal) !important;
+}
+
+/* Home page. */
+.eyebrow,
+.micro-heading {
+  font-size: var(--type-meta) !important;
+}
+
+.hero-search input,
+.hero-assurances p {
+  font-size: var(--type-dense) !important;
+  line-height: 1.35 !important;
+}
+
+.category-card {
+  height: auto !important;
+  min-height: 82px !important;
+  padding-block: 10px !important;
+}
+
+.category-card strong {
+  font-size: var(--type-dense) !important;
+  line-height: 1.2 !important;
+}
+
+.category-card small {
+  font-size: var(--type-meta) !important;
+  line-height: 1.2 !important;
+}
+
+.document-card,
+.mepa-card {
+  height: auto !important;
+  min-height: 430px !important;
+}
+
+.document-copy {
+  height: auto !important;
+  min-height: 430px !important;
+  padding: 20px 22px !important;
+}
+
+.document-copy h2,
+.mepa-heading h2 {
+  font-size: 23px !important;
+  transform: none !important;
+}
+
+.document-copy > p:not(.micro-heading),
+.mepa-heading > p:not(.micro-heading) {
+  font-size: var(--type-copy) !important;
+  line-height: var(--type-leading) !important;
+}
+
+.document-copy li,
+.mepa-step p,
+.multi-code p,
+.proof-item p,
+.entity-copy small {
+  font-size: var(--type-dense) !important;
+  line-height: 1.38 !important;
+}
+
+.document-copy li {
+  margin: 7px 0 !important;
+}
+
+.compact-button,
+.multi-code .primary-button {
+  min-height: 42px !important;
+  height: auto !important;
+  font-size: var(--type-meta) !important;
+}
+
+.secondary-button {
+  width: 150px !important;
+  min-height: 42px !important;
+}
+
+.mepa-step {
+  min-height: 245px !important;
+  padding: 14px 12px 12px !important;
+}
+
+.mepa-step strong,
+.multi-code-title {
+  font-size: var(--type-meta) !important;
+  line-height: 1.25 !important;
+}
+
+.multi-code {
+  min-height: 245px;
+  padding: 12px 12px 58px !important;
+}
+
+.multi-code .primary-button {
+  bottom: 12px !important;
+}
+
+.proof-item {
+  min-height: 92px !important;
+}
+
+.entity-copy {
+  min-height: 94px !important;
+  padding: 12px 30px 14px 13px !important;
+}
+
+.entity-copy strong {
+  font-size: var(--type-copy) !important;
+  line-height: 1.2 !important;
+}
+
+.product-card {
+  height: auto !important;
+  min-height: 325px !important;
+  overflow: visible !important;
+}
+
+.product-copy {
+  padding: 10px 12px 13px !important;
+}
+
+.product-copy h3 {
+  min-height: 44px !important;
+  font-size: var(--type-dense) !important;
+  line-height: 1.22 !important;
+}
+
+.product-copy > p,
+.product-copy > span,
+.product-copy > strong small {
+  font-size: var(--type-meta) !important;
+  line-height: 1.25 !important;
+}
+
+.add-quote,
+.download-link {
+  min-height: 40px !important;
+  height: auto !important;
+  font-size: var(--type-meta) !important;
+  align-items: center !important;
+}
+
+/* Catalog and category listings. */
+.catalog-search input,
+.maker-search,
+.price-range input,
+.filter-sort,
+.result-search,
+.results-toolbar select,
+.toolbar-actions select {
+  min-height: 42px !important;
+  font-size: var(--type-meta) !important;
+}
+
+.filter-reset,
+.filter-group h3,
+.filter-option,
+.toolbar-actions,
+.results-toolbar,
+.chip,
+.pagination a,
+.subcategory-grid a {
+  font-size: var(--type-meta) !important;
+  line-height: 1.35 !important;
+}
+
+.filter-option small {
+  font-size: var(--type-meta) !important;
+}
+
+.catalog-page .catalog-grid,
+.category-page .catalog-grid {
+  grid-auto-rows: auto !important;
+  gap: 16px !important;
+}
+
+.category-page .catalog-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+}
+
+.catalog-page .catalog-card,
+.category-page .catalog-card {
+  height: auto !important;
+  min-height: 315px !important;
+}
+
+.catalog-page .catalog-card__body,
+.category-page .catalog-card__body {
+  height: auto !important;
+  min-height: 155px !important;
+  padding: 11px 12px 14px !important;
+  overflow: visible !important;
+}
+
+.catalog-page .catalog-card__code,
+.category-page .catalog-card__code,
+.catalog-page .catalog-card__brand,
+.category-page .catalog-card__brand,
+.catalog-page .availability,
+.category-page .availability,
+.vat-note {
+  height: auto !important;
+  font-size: var(--type-meta) !important;
+  line-height: 1.25 !important;
+}
+
+.catalog-page .catalog-card h3,
+.category-page .catalog-card h3 {
+  height: auto !important;
+  min-height: 43px !important;
+  max-height: none !important;
+  overflow: visible !important;
+  font-size: var(--type-dense) !important;
+  line-height: 1.2 !important;
+}
+
+.catalog-page .catalog-card__price,
+.category-page .catalog-card__price {
+  height: auto !important;
+  margin-top: 10px !important;
+  font-size: 18px !important;
+  line-height: 1.15 !important;
+}
+
+.catalog-faq {
+  height: auto !important;
+  padding: 28px 0 !important;
+  overflow: visible !important;
+}
+
+.catalog-faq-grid {
+  gap: 14px !important;
+}
+
+.catalog-faq article {
+  padding: 18px !important;
+}
+
+.catalog-faq h3 {
+  font-size: var(--type-copy) !important;
+}
+
+.catalog-faq p {
+  font-size: var(--type-dense) !important;
+  line-height: 1.45 !important;
+}
+
+/* Product detail. */
+.product-page .identity > p,
+.product-page .table-notes,
+.product-page .catalog-download > p,
+.product-page .description-copy,
+.product-page .mepa-copy,
+.product-page .price-note,
+.product-page .request-copy,
+.product-page .sidebar-catalog p {
+  font-size: var(--type-dense) !important;
+  line-height: 1.42 !important;
+}
+
+.product-page .description-credit {
+  font-size: var(--type-meta) !important;
+  line-height: 1.4 !important;
+}
+
+.product-page .device-badge,
+.product-page .identity-row b,
+.product-page .identity-row span,
+.product-page .tech-table th,
+.product-page .tech-table td,
+.product-page .document-box h3,
+.product-page .doc-link b,
+.product-page .doc-link span,
+.product-page .language,
+.product-page .mepa-state b,
+.product-page .mepa-state span,
+.product-page .side-panel label,
+.product-page .price-table b,
+.product-page .price-table span,
+.product-page .price-panel .price-label,
+.product-page .request-title,
+.product-page .sidebar-catalog summary,
+.product-page .alternative-head a,
+.product-page .alternative-table th,
+.product-page .alternative-table td {
+  font-size: var(--type-meta) !important;
+  line-height: 1.35 !important;
+}
+
+.product-page .product-panel h3,
+.product-page .doc-link small,
+.product-page .language small,
+.product-page .availability {
+  font-size: var(--type-meta) !important;
+  line-height: 1.35 !important;
+}
+
+.product-page .side-panel .btn {
+  min-height: 44px !important;
+  font-size: var(--type-meta) !important;
+}
+
+.product-page .product-primary > .product-panel,
+.product-page .alternative-panel,
+.product-page .product-sidebar .side-panel,
+.product-page .product-sidebar .price-panel {
+  height: auto !important;
+  min-height: 0 !important;
+  overflow: visible !important;
+}
+
+.product-page .product-panel,
+.product-page .side-panel,
+.product-page .alternative-panel {
+  padding: 18px !important;
+}
+
+.product-page .doc-link {
+  min-height: 64px !important;
+}
+
+.product-page .language {
+  padding: 10px 8px !important;
+}
+
+.product-page .alternative-table {
+  min-width: 940px;
+}
+
+.product-page .alternative-panel {
+  overflow-x: auto !important;
+}
+
+/* Solution cards and support band. */
+.solutions-page .solutions-proof small {
+  font-size: var(--type-meta) !important;
+}
+
+.solutions-page .solution-body > .solution-copy {
+  font-size: var(--type-copy) !important;
+  line-height: 1.45 !important;
+}
+
+.solutions-page .solution-body li,
+.solutions-page .solution-body .btn {
+  font-size: var(--type-dense) !important;
+}
+
+.solutions-page .solution-card,
+.solutions-page .solution-photo {
+  min-height: 336px !important;
+}
+
+.solutions-page .support-band {
+  width: calc(100% - var(--site-inline-gutter)) !important;
+  height: auto !important;
+  min-height: 0 !important;
+  padding: 24px !important;
+  overflow: visible !important;
+}
+
+.solutions-page .support-item {
+  height: auto !important;
+  min-height: 112px !important;
+  padding: 15px !important;
+}
+
+.solutions-page .support-item b,
+.solutions-page .support-item span,
+.solutions-page .trust-strip div {
+  font-size: var(--type-meta) !important;
+  line-height: 1.35 !important;
+}
+
+/* Portrait pages: references, company, buying guide and MePA. */
+.portrait-frame .hero-proof__item strong,
+.portrait-frame .hero-proof__item span,
+.portrait-frame .section-link {
+  font-size: var(--type-meta) !important;
+  line-height: 1.35 !important;
+}
+
+.portrait-frame .section-title p,
+.portrait-frame .section-title-row p {
+  font-size: var(--type-copy) !important;
+  line-height: 1.45 !important;
+}
+
+.ref-page .metric-panel .eyebrow,
+.ref-page .metric span,
+.ref-page .case-card > p,
+.ref-page .case-card .check-list li,
+.ref-page .example-card span,
+.ref-page .reference-cta p {
+  font-size: var(--type-dense) !important;
+  line-height: 1.42 !important;
+}
+
+.ref-page .example-card strong,
+.ref-page .reference-cta .btn {
+  font-size: var(--type-meta) !important;
+}
+
+.ref-page .case-card {
+  min-height: 470px !important;
+}
+
+.ref-page .example-card {
+  min-height: 145px !important;
+}
+
+.about-page .about-proof__item span,
+.about-page .service-point p,
+.about-page .about-copy p,
+.about-page .supply-card span,
+.about-page .anac-cta p {
+  font-size: var(--type-dense) !important;
+  line-height: 1.42 !important;
+}
+
+.about-page .service-point strong,
+.about-page .about-proof__item strong,
+.about-page .supply-card strong,
+.about-page .supply-card small,
+.about-page .supply-card b,
+.about-page .anac-cta .btn {
+  font-size: var(--type-meta) !important;
+  line-height: 1.35 !important;
+}
+
+.about-page .service-strip,
+.about-page .service-five,
+.about-page .service-point,
+.about-page .about-copy {
+  height: auto !important;
+  overflow: visible !important;
+}
+
+.about-page .service-point {
+  min-height: 175px !important;
+  padding: 12px 17px !important;
+}
+
+.about-page .about-copy {
+  min-height: 0 !important;
+  padding-block: 22px !important;
+}
+
+.about-page .supply-card {
+  min-height: 245px !important;
+}
+
+.buy-page .buy-assist strong,
+.buy-page .procedure-card h3 small,
+.buy-page .need-box h4,
+.buy-page .quote-benefit strong {
+  font-size: var(--type-meta) !important;
+}
+
+.buy-page .buy-assist p,
+.buy-page .procedure-card > p,
+.buy-page .need-box .check-list li,
+.buy-page .quote-intro > p,
+.buy-page .quote-benefit span {
+  font-size: var(--type-dense) !important;
+  line-height: 1.42 !important;
+}
+
+.buy-page .buy-assist .btn,
+.buy-page .procedure-card .btn,
+.buy-page .quote-panel .btn,
+.buy-page .upload-actions .btn {
+  font-size: var(--type-meta) !important;
+}
+
+.buy-page .procedure-card,
+.buy-page .need-box,
+.buy-page .quote-panel {
+  height: auto !important;
+  min-height: 0 !important;
+  overflow: visible !important;
+}
+
+.buy-page .procedure-card {
+  min-height: 590px !important;
+}
+
+.buy-page .quote-panel .field label,
+.buy-page .quote-panel .field input,
+.buy-page .quote-panel .field select,
+.buy-page .quote-panel .field textarea,
+.buy-page .quote-panel .upload-box,
+.buy-page .quote-panel .checkbox-line {
+  font-size: var(--type-meta) !important;
+}
+
+.mepa-page .mepa-flow-section {
+  height: auto !important;
+  min-height: 0 !important;
+  overflow: visible !important;
+}
+
+.mepa-page .mepa-step {
+  height: auto !important;
+  min-height: 460px !important;
+}
+
+.mepa-page .mepa-step > p,
+.mepa-page .mepa-step .check-list li,
+.mepa-page .multi-banner p,
+.mepa-page .multi-banner__checks .check-list li,
+.mepa-page .excel-panel p {
+  font-size: var(--type-dense) !important;
+  line-height: 1.42 !important;
+}
+
+.mepa-page .route-row strong,
+.mepa-page .excel-drop strong,
+.mepa-page .multi-banner .btn,
+.mepa-page .excel-panel .btn {
+  font-size: var(--type-meta) !important;
+}
+
+.mepa-page .route-row span,
+.mepa-page .excel-drop span {
+  font-size: var(--type-meta) !important;
+  line-height: 1.38 !important;
+}
+
+.mepa-page .route-row {
+  min-height: 62px !important;
+}
+
+.mepa-page .multi-banner,
+.mepa-page .excel-panel {
+  height: auto !important;
+  min-height: 260px !important;
+  overflow: hidden !important;
+}
+
+/* Contact page. */
+.contact-main,
+.contact-layout,
+.contact-left,
+.contact-form,
+.direct-card {
+  height: auto !important;
+  overflow: visible !important;
+}
+
+.contact-left,
+.contact-form {
+  padding: 20px !important;
+}
+
+.contact-left > p,
+.contact-form > p,
+.direct-card p,
+.excel-cta p,
+.useful-card span,
+.contact-assurance span {
+  font-size: var(--type-dense) !important;
+  line-height: 1.42 !important;
+}
+
+.direct-card b,
+.useful-card b,
+.contact-assurance b {
+  font-size: var(--type-dense) !important;
+}
+
+.direct-card {
+  min-height: 145px !important;
+  padding: 20px !important;
+}
+
+.useful-card {
+  min-height: 130px !important;
+  padding: 15px !important;
+}
+
+.contact-form .field label,
+.contact-form .field input,
+.contact-form .field select,
+.contact-form .field textarea,
+.contact-form .upload-box,
+.contact-form .checkbox-line,
+.contact-form .btn,
+.excel-cta .btn {
+  font-size: var(--type-meta) !important;
+}
+
+/* FAQ page. */
+.faq-icon span {
+  font-size: var(--type-meta) !important;
+}
+
+.faq-content .accordion-trigger b {
+  font-size: var(--type-meta) !important;
+}
+
+.faq-content,
+.faq-content .section-title-row,
+.faq-content .accordion-item {
+  height: auto !important;
+  overflow: visible !important;
+}
+
+.faq-content .section-title-row p {
+  font-size: var(--type-copy) !important;
+}
+
+.faq-content .accordion-trigger {
+  min-height: 48px !important;
+  font-size: var(--type-dense) !important;
+}
+
+.faq-content .accordion-panel,
+.faq-content .accordion-item:first-child .accordion-panel {
+  font-size: var(--type-dense) !important;
+  line-height: 1.45 !important;
+}
+
+/* Quote list and form. */
+.quote-layout,
+.quote-lines,
+.quote-form,
+.quote-row,
+.quote-note {
+  height: auto !important;
+  overflow: visible !important;
+}
+
+.quote-row {
+  min-height: 142px !important;
+}
+
+.quote-product h3,
+.quote-cell strong,
+.quote-summary,
+.success-detail strong {
+  font-size: var(--type-dense) !important;
+  line-height: 1.3 !important;
+}
+
+.quote-product p,
+.quote-cell small,
+.line-total a,
+.quote-tools > span,
+.quote-note,
+.success-card p,
+.empty-card p {
+  font-size: var(--type-meta) !important;
+  line-height: 1.42 !important;
+}
+
+.quote-tools .btn,
+.quote-form .field label,
+.quote-form .field input,
+.quote-form .field select,
+.quote-form .field textarea,
+.quote-form .upload-box,
+.quote-form .checkbox-line,
+.quote-form > .btn {
+  font-size: var(--type-meta) !important;
+}
+
+.quote-tools,
+.quote-note {
+  min-height: 0 !important;
+  height: auto !important;
+  padding-block: 14px !important;
+}
+
+@media (max-width: 1020px) {
+  .document-card,
+  .mepa-card,
+  .document-copy {
+    min-height: 0 !important;
+  }
+
+  .category-page .catalog-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 900px) {
+  :root {
+    --type-copy: 16px;
+    --type-dense: 16px;
+  }
+
+  .solutions-page .solution-card,
+  .solutions-page .solution-photo {
+    min-height: 0 !important;
+  }
+
+  .mepa-page .page-hero,
+  .contact-hero,
+  .faq-hero,
+  .about-page .page-hero {
+    min-height: 0 !important;
+  }
+
+  .mepa-card .mepa-step {
+    min-height: 160px !important;
+  }
+
+  .mepa-card .multi-code {
+    min-height: 170px !important;
+  }
+
+  .category-page .catalog-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .about-page .service-point,
+  .about-page .supply-card,
+  .buy-page .procedure-card,
+  .mepa-page .mepa-step,
+  .ref-page .case-card,
+  .ref-page .example-card {
+    min-height: 0 !important;
+  }
+
+  .mepa-page .multi-banner {
+    min-height: 520px !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .hero {
+    min-height: 0 !important;
+  }
+}
+
+@media (max-width: 560px) {
+  .catalog-page .catalog-grid,
+  .category-page .catalog-grid,
+  .product-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .catalog-page .catalog-card,
+  .category-page .catalog-card,
+  .product-card {
+    min-height: 0 !important;
+  }
+
+  .catalog-page .catalog-card__body,
+  .category-page .catalog-card__body {
+    min-height: 175px !important;
+  }
+}
+
+/* Clean photographic assets: direct files, never screenshot crops. */
+.clean-photo,
+.clean-product-image {
+  overflow: hidden;
+}
+
+.clean-product-image {
+  position: relative;
+}
+
+.clean-photo > img,
+.clean-photo > picture,
+.clean-photo > picture > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.clean-photo > img,
+.clean-photo > picture > img {
+  object-fit: cover;
+  object-position: center;
+}
+
+.clean-product-image > img {
+  position: static !important;
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  transform: none !important;
+}
+
+.catalog-card__image.clean-product-image > img,
+.gallery-main.clean-product-image > img,
+.gallery-thumb.clean-product-image > img,
+.alt-photo.clean-product-image > img,
+.quote-thumb.clean-product-image > img {
+  padding: 6px;
+  background: #fff;
+}

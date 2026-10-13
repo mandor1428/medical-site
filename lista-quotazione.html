@@ -1,29 +1,154 @@
 <!doctype html><html lang="it"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Rivedi i prodotti selezionati e invia a MedicalMade una richiesta di quotazione completa dei dati della procedura."><title>Fascicolo e lista di quotazione | MedicalMade</title>
+<meta charset="utf-8"><base href="/">
+  <link rel="icon" href="favicon.ico" sizes="any"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Rivedi i prodotti selezionati e invia a MedicalMade una richiesta di quotazione completa dei dati della procedura."><title>Fascicolo e lista di quotazione | MedicalMade</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="assets/css/pages.css">
 <style>
+  .inner-brand.shot-crop>img,.footer-logo.shot-crop>img{z-index:0}
   .quote-page{padding-bottom:20px}.quote-heading{padding:12px 0}.quote-heading h1{margin:0;font:800 clamp(37px,4vw,54px)/1 Poppins,sans-serif;letter-spacing:-.04em}.quote-heading p{margin:8px 0 0;color:#385383;font-size:21px}.quote-layout{display:grid;grid-template-columns:1.68fr .9fr;gap:14px}.quote-lines,.quote-form{overflow:hidden}.box-title{margin:0;padding:14px 16px;background:linear-gradient(90deg,#edf7ff,#e6f3ff);font:700 21px Poppins,sans-serif}.quote-table{padding:0 12px}.quote-table-head,.quote-row{display:grid;grid-template-columns:2.2fr .85fr .9fr .85fr .85fr;gap:12px;align-items:center}.quote-table-head{padding:13px 6px;color:#3a5685;font-weight:700}.quote-row{min-height:116px;padding:15px 6px;border-top:1px solid #dce7f0}.quote-product{display:grid;grid-template-columns:78px 1fr;gap:14px;align-items:center}.quote-thumb{width:78px;height:78px;border:1px solid #dbe7f1;border-radius:5px}.quote-product h3{margin:0;font:700 16px/1.15 Poppins,sans-serif}.quote-product p,.quote-cell small{margin:3px 0 0;color:#60769d;font-size:13px;line-height:1.25}.quote-cell strong{display:block;font:700 16px Poppins,sans-serif}.qty{display:flex;align-items:center;gap:4px}.qty button,.qty output{width:32px;height:32px;display:grid;place-items:center;color:#0753bd;background:#eef6fc;border:1px solid #c7dced;border-radius:4px}.qty output{width:40px;color:#10275e;background:#fff}.line-total{text-align:right}.line-total a{display:block;margin-top:10px;color:#0870e9;font-size:13px}.quote-summary{margin:8px;padding:13px;display:flex;justify-content:space-between;align-items:center;background:#edf7ff;border-radius:6px}.quote-summary strong{font-size:18px}.quote-tools{padding:5px 12px 14px;display:grid;grid-template-columns:auto auto 1fr;gap:10px;align-items:center}.quote-note{margin:0 12px 16px;padding:14px;display:flex;gap:12px;color:#36527f;background:#eef8ff;border-radius:7px;font-size:14px}.quote-form{padding-bottom:14px}.quote-form .form-grid{padding:8px 14px}.quote-form .field textarea{min-height:74px}.quote-form .upload-box{min-height:90px}.quote-form .checkbox-line{padding:0 14px}.quote-form>.btn{width:calc(100% - 28px);margin:12px 14px 0}.after-grid{margin-top:18px;display:grid;grid-template-columns:1.25fr .85fr;gap:14px}.success-card{padding:20px;border-color:#70ce96;background:linear-gradient(110deg,#edfff4,#f8fffa)}.success-card h2{margin:0;color:#086f3d;font:700 23px Poppins,sans-serif}.success-card p{margin:3px 0 16px;color:#37577c}.success-detail{padding:20px;display:grid;grid-template-columns:70px 1fr 1fr 1fr;gap:18px;align-items:center;background:#fff;border-radius:7px}.success-detail i{font-size:42px;color:#7589a8}.success-detail small,.success-detail strong{display:block}.empty-card{padding:30px;display:flex;align-items:center;justify-content:center;text-align:center}.empty-card i{display:block;font-style:normal;font-size:44px;color:#7086a7}.empty-card h2{margin:8px 0 4px;font:700 21px Poppins,sans-serif}.empty-card p{margin:0 0 14px;color:#57709a}.quote-thumb--aed{--source-w:1122;--crop-w:80;--crop-x:40;--crop-h:80;--crop-y:328}.quote-thumb--bed{--source-w:1122;--crop-w:80;--crop-x:40;--crop-h:80;--crop-y:445}.quote-thumb--chair{--source-w:1122;--crop-w:80;--crop-x:40;--crop-h:80;--crop-y:563}.quote-thumb--monitor{--source-w:1122;--crop-w:80;--crop-x:40;--crop-h:80;--crop-y:680}
   @media(min-width:981px){
-    .inner-header__row{gap:18px}.inner-nav{gap:20px}.inner-nav a{font-size:12px}.inner-quote{padding:6px 10px;gap:7px;font-size:14px}
+    .inner-header__row{width:calc(100% - 60px);grid-template-columns:273px 1fr auto;gap:18px}.inner-brand{width:273px;aspect-ratio:273/42}.inner-brand.shot-crop>img,.footer-logo.shot-crop>img{z-index:0}.inner-nav{gap:20px}.inner-nav a{font-size:12px}.inner-quote{padding:6px 10px;gap:7px;font-size:14px}
     .inner-header{height:73px}.breadcrumb{min-height:35px}.quote-heading{height:105px;padding:12px 0}.quote-heading h1{font-size:46px}.quote-heading p{font-size:18px}
     .quote-layout,.quote-lines,.quote-form{height:821px}.box-title{height:47px;padding:10px 14px;font-size:18px}
     .quote-table-head,.quote-row{grid-template-columns:minmax(245px,1fr) 82px 90px 96px 90px;gap:6px}.quote-table-head{height:53px;padding:8px 6px}.quote-row{height:119px;min-height:0;padding:10px 6px}.quote-product{gap:10px}.quote-product h3{font-size:14px;line-height:1.12}.quote-product p,.quote-cell small{font-size:11.5px;line-height:1.18}.quote-cell strong{font-size:14px}.line-total a{margin-top:6px;font-size:11px}
     .quote-summary{height:44px;margin:0 8px;padding:8px 13px}.quote-summary strong{font-size:15px}.quote-tools{height:67px;padding:7px 12px}.quote-tools .btn{min-height:40px;padding:6px 12px;font-size:11px}.quote-tools>span{font-size:10.5px;line-height:1.15}.quote-note{height:63px;margin:3px 12px 0;padding:10px;font-size:11.5px;line-height:1.2}
     .quote-form{padding-bottom:10px}.quote-form .form-grid{padding:7px 14px;gap:6px}.quote-form .field{gap:2px}.quote-form .field label{font-size:11px}.quote-form .field input,.quote-form .field select{min-height:31px;padding:5px 9px;font-size:11px}.quote-form .field textarea{min-height:66px;padding:6px 9px;font-size:11px}.quote-form .upload-box{min-height:72px;padding:8px;font-size:10px}.quote-form .checkbox-line{font-size:10px;line-height:1.15}.quote-form>.btn{min-height:40px;margin-top:8px}
     .after-grid,.success-card,.empty-card{height:234px}.success-card{padding:17px}.success-card p{margin-bottom:11px}.success-detail{padding:15px}.empty-card{padding:20px}
-    .inner-footer{height:95px;padding:10px 0 5px;overflow:hidden}.inner-footer__grid{grid-template-columns:1.55fr .8fr 1fr 1fr .9fr 1.05fr;gap:12px}.inner-footer h2{margin-bottom:2px;font-size:9px}.inner-footer p,.inner-footer a{font-size:8px;line-height:1.25}.inner-footer__legal{margin-top:4px;padding-top:4px;font-size:7.5px}.footer-logo{width:175px;height:31px}
+    .inner-footer{height:95px;padding:10px 0 5px;overflow:hidden}.inner-footer__grid{grid-template-columns:255px .75fr 1fr 1fr 1fr 1.1fr;gap:16px}.inner-footer h2{margin-bottom:2px;font-size:9px}.inner-footer p,.inner-footer a{font-size:8px;line-height:1.25}.inner-footer__legal{margin-top:4px;padding-top:4px;font-size:7.5px}.footer-logo{width:255px;height:40px}
   }
-  @media(max-width:980px){.quote-layout{grid-template-columns:1fr}.quote-table{overflow:auto}.quote-table-head,.quote-row{min-width:760px}.after-grid{grid-template-columns:1fr}}@media(max-width:760px){.quote-heading p{font-size:18px}.quote-table-head,.quote-row{grid-template-columns:230px 90px 95px 110px 105px}.quote-tools{grid-template-columns:1fr}.success-detail{grid-template-columns:1fr 1fr}.success-detail i{grid-column:1/-1}.inner-header__row{grid-template-columns:minmax(0,1fr) auto auto}}
-</style></head><body><div class="inner-frame">
-<header class="inner-header"><div class="inner-header__row"><a class="inner-brand" href="index.html"><img src="assets/screens/referenze.png" alt="MedicalMade — Forniture e soluzioni per la sanità pubblica"></a><button class="inner-menu" data-menu-toggle aria-expanded="false" aria-controls="quote-nav"><span></span><span></span><span></span><b class="sr-only">Apri il menu</b></button><nav class="inner-nav" id="quote-nav" data-primary-nav><a href="catalogo.html">Prodotti <span class="nav-caret">⌄</span></a><a href="soluzioni.html">Soluzioni per organizzazioni <span class="nav-caret">⌄</span></a><a href="mepa.html">MePA</a><a href="chi-siamo.html">Chi siamo</a><a href="referenze.html">Referenze</a><a href="contatti.html">Contatti</a></nav><a class="inner-quote" href="lista-quotazione.html" aria-current="page"><svg viewBox="0 0 24 24"><path d="M6 3h12v18H6zM9 8h6M9 12h6M9 16h4"/></svg><span>Lista quotazione</span><b>4</b></a></div></header>
+  @media(max-width:980px){.quote-layout{grid-template-columns:1fr}.quote-table{overflow:auto}.quote-table-head,.quote-row{min-width:760px}.after-grid{grid-template-columns:1fr}}@media(max-width:900px){.quote-heading p{font-size:18px}.quote-table{overflow:visible;padding:0 12px}.quote-table-head{display:none}.quote-row{min-width:0;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px 12px;padding:16px 6px;align-items:start}.quote-product{grid-column:1/-1;grid-template-columns:78px minmax(0,1fr)}.quote-product>div:last-child,.quote-row>.quote-cell,.quote-row>.qty{min-width:0}.quote-row>.quote-cell{text-align:left}.qty{display:grid;grid-template-columns:repeat(3,40px);align-items:center;justify-content:start}.qty::before,.line-total::before{grid-column:1/-1;display:block;margin-bottom:3px;color:#3a5685;font-size:12px;font-weight:700}.qty::before{content:"Quantità"}.line-total::before{content:"Totale (IVA esclusa)"}.qty button,.qty output{width:40px;height:40px}.line-total a{margin-top:8px}.quote-summary{margin:8px 12px;align-items:flex-start;flex-direction:column;gap:5px}.quote-tools{grid-template-columns:1fr}.quote-tools .btn{width:100%}.after-grid{display:none}.after-grid.is-success,.after-grid.is-empty{display:grid}.after-grid .success-card,.after-grid .empty-card{display:none}.after-grid.is-success .success-card{display:block}.after-grid.is-empty .empty-card{display:flex}.success-detail{grid-template-columns:1fr 1fr}.success-detail i{grid-column:1/-1}.inner-header__row{grid-template-columns:minmax(0,1fr) auto auto}}
+</style>  <link rel="stylesheet" href="assets/css/site-shell.css?v=20261013-3">
+  <link rel="stylesheet" href="assets/css/readability.css?v=20261013-2">
+</head><body><div class="inner-frame">
+<header class="site-header inner-header">
+  <div class="header-inner inner-header__row">
+    <a class="brand inner-brand" href="index.html" aria-label="MedicalMade, home">
+      <img src="assets/brand/logo-orizzontale.svg" width="703" height="91" alt="MedicalMade — Forniture e soluzioni per la sanità pubblica">
+    </a>
+    <button class="menu-toggle inner-menu" type="button" data-menu-toggle aria-expanded="false" aria-controls="site-navigation">
+      <span></span><span></span><span></span><b class="sr-only">Apri il menu</b>
+    </button>
+    <nav class="primary-nav inner-nav" id="site-navigation" data-primary-nav aria-label="Navigazione principale">
+      <a href="catalogo.html">Prodotti <span class="nav-caret">⌄</span></a>
+      <a href="soluzioni.html">Soluzioni per ente <span class="nav-caret">⌄</span></a>
+      <a href="mepa.html">MePA</a>
+      <a href="chi-siamo.html">Chi siamo</a>
+      <a href="referenze.html">Referenze</a>
+      <a href="contatti.html">Contatti</a>
+    </nav>
+    <a class="quote-link inner-quote" href="lista-quotazione.html" aria-label="Lista quotazione, 4 prodotti">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18H6zM9 8h6M9 12h6M9 16h4"/></svg>
+      <span>Lista quotazione</span><b data-quote-count>4</b>
+    </a>
+  </div>
+</header>
+
 <main class="quote-page"><div class="page-shell breadcrumb"><a href="index.html">Home</a><span>›</span><strong>Lista quotazione</strong></div><header class="page-shell quote-heading"><h1>Fascicolo di quotazione</h1><p>Rivedi i prodotti selezionati, indica le quantità richieste e inviaci i dati della procedura.</p></header>
 <div class="page-shell quote-layout"><section class="quote-lines panel"><h2 class="box-title">Righe di fornitura</h2><div class="quote-table"><div class="quote-table-head"><span>Prodotto</span><span>Codice</span><span>Prezzo unitario<br>(IVA esclusa)</span><span>Quantità</span><span style="text-align:right">Totale<br>(IVA esclusa)</span></div>
-  <article class="quote-row"><div class="quote-product"><div class="quote-thumb quote-thumb--aed shot-crop"><img src="assets/screens/lista-quotazione.png" alt="Defibrillatore semiautomatico AED"></div><div><h3>Defibrillatore semiautomatico AED</h3><p>Defibrillatore semiautomatico esterno con guida vocale, per uso pubblico e professionale.</p></div></div><div class="quote-cell"><strong>GIMA-35340</strong><small>Codice produttore</small></div><div class="quote-cell"><strong>€ 1.250,00</strong><small>cad.</small></div><div class="qty" data-qty><button data-minus type="button">−</button><output>1</output><button data-plus type="button">+</button></div><div class="quote-cell line-total"><strong>€ 1.250,00</strong><a href="#">▱ Rimuovi riga</a></div></article>
-  <article class="quote-row"><div class="quote-product"><div class="quote-thumb quote-thumb--bed shot-crop"><img src="assets/screens/lista-quotazione.png" alt="Lettino visita medico"></div><div><h3>Lettino visita medico a 2 sezioni</h3><p>Lettino da visita a due sezioni con struttura in acciaio verniciato e rivestimento lavabile.</p></div></div><div class="quote-cell"><strong>GIMA-27441</strong><small>Codice produttore</small></div><div class="quote-cell"><strong>€ 420,00</strong><small>cad.</small></div><div class="qty" data-qty><button data-minus type="button">−</button><output>2</output><button data-plus type="button">+</button></div><div class="quote-cell line-total"><strong>€ 840,00</strong><a href="#">▱ Rimuovi riga</a></div></article>
-  <article class="quote-row"><div class="quote-product"><div class="quote-thumb quote-thumb--chair shot-crop"><img src="assets/screens/lista-quotazione.png" alt="Carrozzina pieghevole ad autospinta"></div><div><h3>Carrozzina pieghevole ad autospinta</h3><p>Carrozzina pieghevole in alluminio con ruote posteriori ad autospinta.</p></div></div><div class="quote-cell"><strong>GIMA-43210</strong><small>Codice produttore</small></div><div class="quote-cell"><strong>€ 310,50</strong><small>cad.</small></div><div class="qty" data-qty><button data-minus type="button">−</button><output>3</output><button data-plus type="button">+</button></div><div class="quote-cell line-total"><strong>€ 931,50</strong><a href="#">▱ Rimuovi riga</a></div></article>
-  <article class="quote-row"><div class="quote-product"><div class="quote-thumb quote-thumb--monitor shot-crop"><img src="assets/screens/lista-quotazione.png" alt="Monitor multiparametrico"></div><div><h3>Monitor multiparametrico</h3><p>Monitor multiparametrico per il controllo di ECG, SpO₂, NIBP, TEMP e frequenza respiratoria.</p></div></div><div class="quote-cell"><strong>GIMA-20000</strong><small>Codice produttore</small></div><div class="quote-cell"><strong>€ 918,30</strong><small>cad.</small></div><div class="qty" data-qty><button data-minus type="button">−</button><output>1</output><button data-plus type="button">+</button></div><div class="quote-cell line-total"><strong>€ 918,30</strong><a href="#">▱ Rimuovi riga</a></div></article>
-</div><div class="quote-summary"><span>Righe: <strong>4 prodotti</strong></span><strong>Valore indicativo totale: € 3.940,72 + IVA</strong></div><div class="quote-tools"><a class="btn btn--outline" href="assets/modello-elenco-prodotti.xlsx" download>⇩ Scarica il modello (.xlsx)</a><label class="btn btn--outline" for="quote-excel">⇧ Carica il tuo elenco in Excel</label><input class="sr-only" id="quote-excel" type="file" accept=".xlsx,.xls,.csv"><span>Puoi scaricare il modello, compilarlo e ricaricarlo per inserire velocemente più prodotti.</span></div><p class="quote-note"><strong>ⓘ</strong><span>Questa è una <b>richiesta di quotazione, non un ordine di acquisto.</b> I prezzi sono indicativi e potranno essere oggetto di conferma da parte del nostro ufficio commerciale.</span></p></section>
+  <article class="quote-row" data-unit-price="1250"><div class="quote-product"><div class="quote-thumb clean-product-image"><img src="assets/images/lista-quotazione/defibrillatore-gima-35340.webp" width="80" height="80" alt="Defibrillatore semiautomatico AED" loading="lazy" decoding="async"></div><div><h3>Defibrillatore semiautomatico AED</h3><p>Defibrillatore semiautomatico esterno con guida vocale, per uso pubblico e professionale.</p></div></div><div class="quote-cell"><strong>GIMA-35340</strong><small>Codice produttore</small></div><div class="quote-cell"><strong>€ 1.250,00</strong><small>cad.</small></div><div class="qty" data-qty><button data-minus type="button" aria-label="Riduci quantità">−</button><output>1</output><button data-plus type="button" aria-label="Aumenta quantità">+</button></div><div class="quote-cell line-total"><strong>€ 1.250,00</strong><a href="#" data-remove-row>▱ Rimuovi riga</a></div></article>
+  <article class="quote-row" data-unit-price="420"><div class="quote-product"><div class="quote-thumb clean-product-image"><img src="assets/images/lista-quotazione/lettino-gima-27441.webp" width="80" height="80" alt="Lettino visita medico" loading="lazy" decoding="async"></div><div><h3>Lettino visita medico a 2 sezioni</h3><p>Lettino da visita a due sezioni con struttura in acciaio verniciato e rivestimento lavabile.</p></div></div><div class="quote-cell"><strong>GIMA-27441</strong><small>Codice produttore</small></div><div class="quote-cell"><strong>€ 420,00</strong><small>cad.</small></div><div class="qty" data-qty><button data-minus type="button" aria-label="Riduci quantità">−</button><output>2</output><button data-plus type="button" aria-label="Aumenta quantità">+</button></div><div class="quote-cell line-total"><strong>€ 840,00</strong><a href="#" data-remove-row>▱ Rimuovi riga</a></div></article>
+  <article class="quote-row" data-unit-price="310.5"><div class="quote-product"><div class="quote-thumb clean-product-image"><img src="assets/images/lista-quotazione/carrozzina-gima-43210.webp" width="80" height="80" alt="Carrozzina pieghevole ad autospinta" loading="lazy" decoding="async"></div><div><h3>Carrozzina pieghevole ad autospinta</h3><p>Carrozzina pieghevole in alluminio con ruote posteriori ad autospinta.</p></div></div><div class="quote-cell"><strong>GIMA-43210</strong><small>Codice produttore</small></div><div class="quote-cell"><strong>€ 310,50</strong><small>cad.</small></div><div class="qty" data-qty><button data-minus type="button" aria-label="Riduci quantità">−</button><output>3</output><button data-plus type="button" aria-label="Aumenta quantità">+</button></div><div class="quote-cell line-total"><strong>€ 931,50</strong><a href="#" data-remove-row>▱ Rimuovi riga</a></div></article>
+  <article class="quote-row" data-unit-price="918.3"><div class="quote-product"><div class="quote-thumb clean-product-image"><img src="assets/images/lista-quotazione/monitor-gima-20000.webp" width="80" height="80" alt="Monitor multiparametrico" loading="lazy" decoding="async"></div><div><h3>Monitor multiparametrico</h3><p>Monitor multiparametrico per il controllo di ECG, SpO₂, NIBP, TEMP e frequenza respiratoria.</p></div></div><div class="quote-cell"><strong>GIMA-20000</strong><small>Codice produttore</small></div><div class="quote-cell"><strong>€ 918,30</strong><small>cad.</small></div><div class="qty" data-qty><button data-minus type="button" aria-label="Riduci quantità">−</button><output>1</output><button data-plus type="button" aria-label="Aumenta quantità">+</button></div><div class="quote-cell line-total"><strong>€ 918,30</strong><a href="#" data-remove-row>▱ Rimuovi riga</a></div></article>
+</div><div class="quote-summary"><span>Righe: <strong data-quote-count>4 prodotti</strong></span><strong data-quote-total>Valore indicativo totale: € 3.940,72 + IVA</strong></div><div class="quote-tools"><a class="btn btn--outline" href="assets/modello-elenco-prodotti.xlsx" download>⇩ Scarica il modello (.xlsx)</a><label class="btn btn--outline" for="quote-excel">⇧ Carica il tuo elenco in Excel</label><input class="sr-only" id="quote-excel" type="file" accept=".xlsx,.xls,.csv"><span>Puoi scaricare il modello, compilarlo e ricaricarlo per inserire velocemente più prodotti.</span></div><p class="quote-note"><strong>ⓘ</strong><span>Questa è una <b>richiesta di quotazione, non un ordine di acquisto.</b> I prezzi sono indicativi e potranno essere oggetto di conferma da parte del nostro ufficio commerciale.</span></p></section>
 <form class="quote-form panel" data-demo-form><h2 class="box-title">Richiesta di quotazione</h2><div class="form-grid"><div class="field field--full"><label for="q-ente">Ente</label><input id="q-ente" value="ASL Roma 1" required></div><div class="field field--full"><label for="q-tipo">Tipo ente</label><select id="q-tipo"><option>Azienda Sanitaria Locale (ASL)</option></select></div><div class="field field--full"><label for="q-ref">Referente</label><input id="q-ref" value="Dott. Marco Bianchi" required></div><div class="field field--full"><label for="q-email">Email</label><input id="q-email" type="email" value="marco.bianchi@aslroma1.it" required></div><div class="field field--full"><label for="q-tel">Telefono</label><input id="q-tel" value="+39 06 7730 1234" required></div><div class="field field--full"><label for="q-cig">CIG</label><input id="q-cig" value="B2D4E6F789"></div><div class="field field--full"><label for="q-platform">Piattaforma</label><select id="q-platform"><option>MePA</option><option>Sintel</option></select></div><div class="field field--full"><label for="q-note">Note</label><textarea id="q-note">Richiesta di quotazione per il rinnovo delle attrezzature del reparto di medicina d'urgenza. Si richiede indicazione di tempi di consegna e condizioni di garanzia.</textarea></div><div class="field field--full"><label for="q-file">Allegati</label><label class="upload-box" for="q-file">⇧ <span><strong>Carica allegato</strong><small>Formati ammessi: .xlsx, .xls, .csv, .pdf — massimo 10 MB</small></span></label><input class="sr-only" id="q-file" type="file"></div></div><label class="checkbox-line"><input type="checkbox" checked required><span>Ho letto l’<a href="#">informativa privacy</a> e autorizzo il trattamento dei dati ai fini della richiesta di quotazione.</span></label><button class="btn btn--primary" type="submit">➤ &nbsp; Invia richiesta</button><div class="form-status" role="status">Richiesta inviata correttamente.</div></form></div>
 <div class="page-shell after-grid"><section class="success-card panel"><h2>● &nbsp; Richiesta inviata.</h2><p>Abbiamo ricevuto il tuo fascicolo di quotazione. Ti risponderemo appena possibile.</p><div class="success-detail"><i>▤</i><div><small>Numero richiesta</small><strong>RQ-2025-00157</strong></div><div><small>Data</small><strong>14 aprile 2025, 10:42</strong></div><div><small>Stato</small><span class="availability">Ricevuta</span></div></div></section><section class="empty-card panel"><div><i>▤</i><h2>La tua lista è vuota</h2><p>Non hai ancora aggiunto prodotti al tuo fascicolo di quotazione.</p><a class="btn btn--primary" href="catalogo.html">⌕ &nbsp; Vai al catalogo</a></div></section></div></main>
-<footer class="inner-footer"><div class="page-shell inner-footer__grid"><a class="footer-logo" href="index.html"><img src="reference/homepage.png" alt="MedicalMade"></a><nav><h2>Azienda</h2><a href="chi-siamo.html">Chi siamo</a><a href="referenze.html">Referenze</a></nav><nav><h2>Acquisti</h2><a href="come-acquistare.html">Come acquistare</a><a href="mepa.html">Acquista su MePA</a></nav><nav><h2>Supporto</h2><a href="faq.html">Domande frequenti</a><a href="contatti.html">Tutti i contatti</a></nav><nav><h2>Informazioni</h2><a href="#">Privacy e assistenza</a><a href="#">Accessibilità e contatti</a></nav><div><h2>BlueBag Italia S.r.l.</h2><p>sales@medicalmade.it<br>+39 02 2416 4882</p></div></div><div class="page-shell inner-footer__legal">© 2026 MedicalMade – Tutti i diritti riservati &nbsp; | &nbsp; P.IVA 12345678900 &nbsp; | &nbsp; Cookie &nbsp; | &nbsp; Termini e condizioni &nbsp; | &nbsp; Privacy</div></footer>
-</div><script src="assets/js/pages.js"></script></body></html>
+<footer class="site-footer inner-footer" id="footer">
+  <div class="page-shell inner-footer__grid">
+    <div class="company-copy footer-company">
+      <a class="footer-logo footer-brand" href="index.html" aria-label="MedicalMade, home">
+        <img src="assets/brand/logo-verticale-bianco.svg" width="570" height="346" alt="MedicalMade — Forniture e soluzioni per la sanità pubblica">
+      </a>
+      <address><strong>BlueBag Italia S.r.l.</strong><br>Via Melchiorre Gioia 132, 20125 Milano<br><a href="mailto:sales@medicalmade.it">sales@medicalmade.it</a><br><a href="tel:+390224164882">+39 02 2416 4882</a></address>
+    </div>
+    <nav class="footer-column" aria-label="Prodotti">
+      <h2>Prodotti</h2>
+      <a href="catalogo.html">Tutte le categorie</a>
+      <a href="categoria.html">Diagnostica</a>
+      <a href="prodotto.html">Prodotto in evidenza</a>
+      <a href="prodotto.html#documenti">Fascicolo tecnico</a>
+    </nav>
+    <nav class="footer-column" aria-label="Soluzioni per ente">
+      <h2>Soluzioni per ente</h2>
+      <a href="soluzioni.html">Scuole e università</a>
+      <a href="soluzioni.html">RSA</a>
+      <a href="soluzioni.html">ASL e ospedali</a>
+      <a href="soluzioni.html">Comuni ed enti pubblici</a>
+    </nav>
+    <nav class="footer-column" aria-label="Come acquistare">
+      <h2>Come acquistare</h2>
+      <a href="come-acquistare.html">Guida all’acquisto</a>
+      <a href="mepa.html">Acquista su MePA</a>
+      <a href="come-acquistare.html#rdo">RdO e trattative dirette</a>
+      <a href="lista-quotazione.html">Lista quotazione</a>
+    </nav>
+    <nav class="footer-column" aria-label="Azienda">
+      <h2>Azienda</h2>
+      <a href="chi-siamo.html">Chi siamo</a>
+      <a href="referenze.html">Referenze</a>
+      <a href="faq.html">Domande frequenti</a>
+    </nav>
+    <nav class="footer-column" aria-label="Supporto">
+      <h2>Supporto</h2>
+      <a href="contatti.html">Tutti i contatti</a>
+      <a href="contatti.html#privacy">Privacy e assistenza</a>
+      <a href="contatti.html">Accessibilità</a>
+      <a href="contatti.html#privacy">Termini e condizioni</a>
+    </nav>
+  </div>
+  <div class="page-shell inner-footer__legal footer-legal">
+    <span>© 2026 BlueBag Italia S.r.l. – Tutti i diritti riservati.</span>
+    <span>P.IVA 12345678900</span>
+    <a href="contatti.html#privacy">Privacy</a>
+    <a href="contatti.html#privacy">Termini e condizioni</a>
+    <a href="contatti.html">Accessibilità</a>
+    <a href="faq.html">Cookie</a>
+  </div>
+</footer>
+
+</div><script src="assets/js/pages.js"></script><script>
+(() => {
+  const table = document.querySelector('.quote-table');
+  const count = document.querySelector('[data-quote-count]');
+  const total = document.querySelector('[data-quote-total]');
+  const badge = document.querySelector('.inner-quote b');
+  const afterGrid = document.querySelector('.after-grid');
+  const form = document.querySelector('.quote-form');
+  if (!table || !count || !total) return;
+
+  const money = (value) => `€ ${new Intl.NumberFormat('it-IT', { minimumFractionDigits: 2, maximumFractionDigits: 2, useGrouping: true }).format(value)}`;
+  const rows = () => [...table.querySelectorAll('.quote-row')];
+  const refresh = () => {
+    let value = 0;
+    rows().forEach((row) => {
+      const quantity = Number(row.querySelector('output')?.value || 1);
+      const lineValue = Number(row.dataset.unitPrice) * quantity;
+      row.querySelector('.line-total strong').textContent = money(lineValue);
+      value += lineValue;
+    });
+    const length = rows().length;
+    count.textContent = `${length} ${length === 1 ? 'prodotto' : 'prodotti'}`;
+    total.textContent = `Valore indicativo totale: ${money(value)} + IVA`;
+    if (badge) badge.textContent = String(length);
+    if (!length && afterGrid) {
+      afterGrid.classList.remove('is-success');
+      afterGrid.classList.add('is-empty');
+    }
+  };
+
+  table.addEventListener('click', (event) => {
+    const remove = event.target.closest('[data-remove-row]');
+    if (remove) {
+      event.preventDefault();
+      remove.closest('.quote-row')?.remove();
+      refresh();
+      return;
+    }
+    if (event.target.closest('[data-minus], [data-plus]')) refresh();
+  });
+
+  form?.addEventListener('submit', () => {
+    if (!form.checkValidity() || !afterGrid || !rows().length) return;
+    afterGrid.classList.remove('is-empty');
+    afterGrid.classList.add('is-success');
+  });
+})();
+</script></body></html>

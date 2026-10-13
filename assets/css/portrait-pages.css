@@ -1,5 +1,9 @@
 .portrait-frame {
-  max-width: 1024px;
+  max-width: none;
+}
+
+.buy-mobile-photo {
+  display: none;
 }
 
 .portrait-frame .page-shell,
@@ -446,7 +450,7 @@
 .excel-drop span { color: #526b96; font-size: 11px; line-height: 1.4; }
 
 /* Desktop fidelity adjustments for the supplied 1024 px portrait mockups. */
-@media (min-width: 761px) {
+@media (min-width: 901px) {
   .about-page .page-hero { height: 204px; }
   .about-page .page-hero__inner { min-height: 161px !important; height: 161px; padding: 0 0 6px; }
   .about-page .service-strip { height: 212px; padding: 10px 0 7px; overflow: hidden; }
@@ -456,6 +460,11 @@
   .about-page .service-point strong { margin-top: 2px; }
   .about-page .service-point p { margin-top: 2px; font-size: 11.5px; line-height: 1.18; }
   .about-page .about-copy { height: 133px; padding: 2px 0 4px; overflow: hidden; }
+  .about-page .about-proof { width: 51%; height: 78px; bottom: 15px; }
+  .about-page .about-proof__item { padding: 8px 10px; align-items: center; }
+  .about-page .about-proof__item .line-icon { width: 28px; height: 28px; }
+  .about-page .about-proof__item strong { font-size: 14px; }
+  .about-page .about-proof__item span { font-size: 10.5px; line-height: 1.15; }
 
   .ref-page .page-hero { height: 307px; }
   .ref-page .page-hero__inner { min-height: 264px !important; height: 264px; padding: 10px 0 14px; }
@@ -503,7 +512,7 @@
   .portrait-frame .inner-footer__grid { grid-template-columns: 1.45fr repeat(5,1fr); gap: 10px; }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 900px) {
   .portrait-frame .page-shell,
   .portrait-frame .inner-header__row { width: calc(100% - 28px); }
   .portrait-frame .inner-header__row { grid-template-columns: minmax(0,1fr) auto auto; }
@@ -511,6 +520,35 @@
   .portrait-frame .inner-nav { gap: 0; }
   .portrait-frame .inner-nav a { font-size: 15px; }
   .portrait-frame .page-hero__photo { height: 190px; width: 100%; }
+  .mepa-page .page-hero__photo {
+    --crop-x: 555 !important;
+    --crop-w: 469 !important;
+    --crop-h: 300 !important;
+  }
+  .buy-page .page-hero__photo {
+    --source-w: 1536 !important;
+    --crop-x: 850 !important;
+    --crop-y: 60 !important;
+    --crop-w: 686 !important;
+    --crop-h: 303 !important;
+  }
+  .buy-page .page-hero__photo > img:not(.buy-mobile-photo) { display: none; }
+  .buy-page .page-hero__photo > .buy-mobile-photo {
+    display: block;
+    width: 223.907% !important;
+    left: -123.907% !important;
+    top: -19.802% !important;
+  }
+  .about-page .page-hero__photo {
+    --crop-x: 600 !important;
+    --crop-w: 400 !important;
+    --crop-h: 106 !important;
+  }
+  .ref-page .page-hero__photo {
+    --crop-x: 590 !important;
+    --crop-w: 434 !important;
+    --crop-h: 260 !important;
+  }
   .portrait-hero .page-hero__inner { min-height: 0; padding: 17px 0 23px; }
   .portrait-frame .page-hero h1 { font-size: clamp(35px,10vw,46px); }
   .portrait-frame .hero-proof { flex-direction: column; }

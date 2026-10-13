@@ -2,6 +2,8 @@
 <html lang="it">
 <head>
   <meta charset="utf-8">
+  <base href="/">
+  <link rel="icon" href="favicon.ico" sizes="any">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Acquista forniture sanitarie su MePA con il supporto MedicalMade.">
   <title>Acquista su MePA | MedicalMade</title>
@@ -10,6 +12,22 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&amp;family=Source+Sans+3:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/pages.css">
   <link rel="stylesheet" href="assets/css/portrait-pages.css">
+  <link rel="stylesheet" href="assets/css/site-shell.css?v=20261013-3">
+  <link rel="stylesheet" href="assets/css/readability.css?v=20261013-2">
+  <style>
+    .mepa-page .page-hero__photo picture,
+    .mepa-page .page-hero__photo img,
+    .mepa-step__art img,
+    .multi-banner__art img { display:block; width:100%; height:100%; }
+    .mepa-page .page-hero__photo img,
+    .mepa-step__art img,
+    .multi-banner__art img { object-fit:cover; }
+    .mepa-step__art { overflow:hidden; }
+    @media (max-width:900px) {
+      .mepa-page .page-hero__photo { height:auto!important; aspect-ratio:469/300; }
+      .mepa-page .multi-banner__art { overflow:hidden; background:#dceefa; }
+    }
+  </style>
 </head>
 <body>
   <svg class="sr-only" aria-hidden="true">
@@ -25,20 +43,33 @@
   </svg>
 
   <div class="inner-frame portrait-frame mepa-page">
-    <header class="inner-header">
-      <div class="inner-header__row">
-        <a class="inner-brand shot-crop" href="index.html" aria-label="MedicalMade, home" style="--source-w:1024;--crop-x:48;--crop-y:10;--crop-w:239;--crop-h:35"><img src="assets/screens/chi-siamo.png" alt="MedicalMade"></a>
-        <button class="inner-menu" type="button" aria-expanded="false" aria-controls="primary-nav" data-menu-toggle><span></span><span></span><span></span><b class="sr-only">Apri il menu</b></button>
-        <nav class="inner-nav" id="primary-nav" aria-label="Navigazione principale" data-primary-nav>
-          <a href="catalogo.html">Prodotti <span class="nav-caret">⌄</span></a><a href="soluzioni.html">Soluzioni per organizzazioni <span class="nav-caret">⌄</span></a><a href="mepa.html" aria-current="page">MePA</a><a href="chi-siamo.html">Chi siamo</a><a href="referenze.html">Referenze</a><a href="contatti.html">Contatti</a>
-        </nav>
-        <a class="inner-quote" href="lista-quotazione.html"><svg><use href="#i-list"></use></svg><span>Lista quotazione</span><b>3</b></a>
-      </div>
-    </header>
+    <header class="site-header inner-header">
+  <div class="header-inner inner-header__row">
+    <a class="brand inner-brand" href="index.html" aria-label="MedicalMade, home">
+      <img src="assets/brand/logo-orizzontale.svg" width="703" height="91" alt="MedicalMade — Forniture e soluzioni per la sanità pubblica">
+    </a>
+    <button class="menu-toggle inner-menu" type="button" data-menu-toggle aria-expanded="false" aria-controls="site-navigation">
+      <span></span><span></span><span></span><b class="sr-only">Apri il menu</b>
+    </button>
+    <nav class="primary-nav inner-nav" id="site-navigation" data-primary-nav aria-label="Navigazione principale">
+      <a href="catalogo.html">Prodotti <span class="nav-caret">⌄</span></a>
+      <a href="soluzioni.html">Soluzioni per ente <span class="nav-caret">⌄</span></a>
+      <a href="mepa.html">MePA</a>
+      <a href="chi-siamo.html">Chi siamo</a>
+      <a href="referenze.html">Referenze</a>
+      <a href="contatti.html">Contatti</a>
+    </nav>
+    <a class="quote-link inner-quote" href="lista-quotazione.html" aria-label="Lista quotazione, 4 prodotti">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18H6zM9 8h6M9 12h6M9 16h4"/></svg>
+      <span>Lista quotazione</span><b data-quote-count>4</b>
+    </a>
+  </div>
+</header>
+
 
     <main>
       <section class="page-hero portrait-hero" style="--hero-inner:307px;--hero-photo-width:58%">
-        <div class="page-hero__photo shot-crop" aria-hidden="true" style="--source-w:1024;--crop-x:437;--crop-y:54;--crop-w:587;--crop-h:356"><img src="assets/screens/mepa.png" alt=""></div>
+        <div class="page-hero__photo clean-photo" aria-hidden="true"><img src="assets/img/generated/mepa-hero-clean.webp" width="1600" height="971" alt="" fetchpriority="high" decoding="async"></div>
         <div class="page-shell">
           <nav class="breadcrumb" aria-label="Percorso"><a href="index.html">Home</a><span>›</span><strong>MePA</strong></nav>
           <div class="page-hero__inner">
@@ -60,13 +91,13 @@
             <article class="mepa-step compact-panel">
               <div class="mepa-step__head"><span class="round-number">1</span><h3>Trova il prodotto</h3></div>
               <p>Cerca nel nostro catalogo e seleziona i prodotti che ti servono per il tuo ente. Puoi aggiungerli alla lista quotazione.</p>
-              <div class="mepa-step__art crop-art" role="img" aria-label="Ricerca prodotti nel catalogo MedicalMade" style="--source-w:1024;--crop-x:50;--crop-y:635;--crop-w:275;--crop-h:159"><img src="assets/screens/mepa.png" alt=""></div>
+              <div class="mepa-step__art clean-photo" role="img" aria-label="Ricerca prodotti nel catalogo MedicalMade"><img src="assets/img/generated/mepa-step-catalogo-clean.webp" width="1600" height="926" loading="lazy" decoding="async" alt=""></div>
               <ul class="check-list"><li>Oltre 7.600 prodotti</li><li>Schede tecniche e documenti</li><li>Prodotti dei principali marchi</li></ul>
             </article>
             <article class="mepa-step compact-panel">
               <div class="mepa-step__head"><span class="round-number round-number--green">2</span><h3>Verifica i riferimenti MePA</h3></div>
               <p>Per ogni prodotto indichiamo se è già a catalogo su MePA e forniamo il codice da utilizzare, oppure ti supportiamo nell’inserimento.</p>
-              <div class="mepa-step__art crop-art" role="img" aria-label="Scheda con codice MePA" style="--source-w:1024;--crop-x:376;--crop-y:636;--crop-w:275;--crop-h:159"><img src="assets/screens/mepa.png" alt=""></div>
+              <div class="mepa-step__art clean-photo" role="img" aria-label="Scheda con riferimento MePA verificato"><img src="assets/img/generated/mepa-step-codice-clean.webp" width="1600" height="926" loading="lazy" decoding="async" alt=""></div>
               <ul class="check-list"><li>Codici MePA indicati in scheda</li><li>Assistenza per nuovi codici</li><li>Documentazione pronta per la procedura</li></ul>
             </article>
             <article class="mepa-step compact-panel">
@@ -84,7 +115,7 @@
       </section>
 
       <section class="page-shell compact-panel multi-banner">
-        <div class="multi-banner__art shot-crop" aria-hidden="true" style="--source-w:1024;--crop-x:468;--crop-y:934;--crop-w:532;--crop-h:246"><img src="assets/screens/mepa.png" alt=""></div>
+        <div class="multi-banner__art clean-photo" aria-hidden="true"><img src="assets/img/generated/mepa-kit-clean.webp" width="1600" height="740" loading="lazy" decoding="async" alt=""></div>
         <div class="multi-banner__copy"><h2>Più prodotti,<br><span>un solo codice MePA</span></h2><p>Se acquisti più prodotti con lo stesso fornitore, possiamo aiutarti a utilizzare un unico codice MePA per semplificare la procedura e ridurre i passaggi.</p><a class="btn btn--outline" href="come-acquistare.html">Scopri come funziona <svg><use href="#i-arrow"></use></svg></a></div>
         <div class="multi-banner__checks"><ul class="check-list"><li>Un solo codice MePA</li><li>Procedura più semplice</li><li>Meno passaggi amministrativi</li><li>Supporto dedicato</li></ul></div>
       </section>
@@ -95,17 +126,59 @@
       </section>
     </main>
 
-    <footer class="inner-footer">
-      <div class="page-shell inner-footer__grid">
-        <div><a class="footer-brand-crop shot-crop" href="index.html" aria-label="MedicalMade, home" style="--source-w:1086;--crop-x:34;--crop-y:1335;--crop-w:245;--crop-h:42"><img src="reference/homepage.png" alt="MedicalMade"></a></div>
-        <nav aria-label="Prodotti"><h2>Prodotti</h2><a href="catalogo.html">Catalogo</a><a href="categoria.html">Diagnostica</a><a href="prodotto.html">Prodotto in evidenza</a></nav>
-        <nav aria-label="Soluzioni"><h2>Soluzioni</h2><a href="soluzioni.html">Soluzioni per enti</a><a href="chi-siamo.html">Chi siamo</a><a href="referenze.html">Referenze</a></nav>
-        <nav aria-label="Acquisti"><h2>Come acquistare</h2><a href="come-acquistare.html">Guida all’acquisto</a><a href="mepa.html">Acquista su MePA</a><a href="lista-quotazione.html">Lista quotazione</a></nav>
-        <nav aria-label="Supporto"><h2>Supporto</h2><a href="faq.html">Domande frequenti</a><a href="contatti.html">Tutti i contatti</a><a href="contatti.html#privacy">Privacy e assistenza</a></nav>
-        <div class="footer-contact"><h2>BlueBag Italia S.r.l.</h2><p>✉ sales@medicalmade.it<br>☎ +39 02 2416 4882</p></div>
-      </div>
-      <div class="page-shell inner-footer__legal"><span>© 2026 MedicalMade – Tutti i diritti riservati</span><span>|</span><span>P.IVA 12345678900</span><span>|</span><a href="faq.html">Cookie</a><span>|</span><a href="contatti.html#privacy">Termini e condizioni</a><span>|</span><a href="contatti.html#privacy">Privacy</a></div>
-    </footer>
+    <footer class="site-footer inner-footer" id="footer">
+  <div class="page-shell inner-footer__grid">
+    <div class="company-copy footer-company">
+      <a class="footer-logo footer-brand" href="index.html" aria-label="MedicalMade, home">
+        <img src="assets/brand/logo-verticale-bianco.svg" width="570" height="346" alt="MedicalMade — Forniture e soluzioni per la sanità pubblica">
+      </a>
+      <address><strong>BlueBag Italia S.r.l.</strong><br>Via Melchiorre Gioia 132, 20125 Milano<br><a href="mailto:sales@medicalmade.it">sales@medicalmade.it</a><br><a href="tel:+390224164882">+39 02 2416 4882</a></address>
+    </div>
+    <nav class="footer-column" aria-label="Prodotti">
+      <h2>Prodotti</h2>
+      <a href="catalogo.html">Tutte le categorie</a>
+      <a href="categoria.html">Diagnostica</a>
+      <a href="prodotto.html">Prodotto in evidenza</a>
+      <a href="prodotto.html#documenti">Fascicolo tecnico</a>
+    </nav>
+    <nav class="footer-column" aria-label="Soluzioni per ente">
+      <h2>Soluzioni per ente</h2>
+      <a href="soluzioni.html">Scuole e università</a>
+      <a href="soluzioni.html">RSA</a>
+      <a href="soluzioni.html">ASL e ospedali</a>
+      <a href="soluzioni.html">Comuni ed enti pubblici</a>
+    </nav>
+    <nav class="footer-column" aria-label="Come acquistare">
+      <h2>Come acquistare</h2>
+      <a href="come-acquistare.html">Guida all’acquisto</a>
+      <a href="mepa.html">Acquista su MePA</a>
+      <a href="come-acquistare.html#rdo">RdO e trattative dirette</a>
+      <a href="lista-quotazione.html">Lista quotazione</a>
+    </nav>
+    <nav class="footer-column" aria-label="Azienda">
+      <h2>Azienda</h2>
+      <a href="chi-siamo.html">Chi siamo</a>
+      <a href="referenze.html">Referenze</a>
+      <a href="faq.html">Domande frequenti</a>
+    </nav>
+    <nav class="footer-column" aria-label="Supporto">
+      <h2>Supporto</h2>
+      <a href="contatti.html">Tutti i contatti</a>
+      <a href="contatti.html#privacy">Privacy e assistenza</a>
+      <a href="contatti.html">Accessibilità</a>
+      <a href="contatti.html#privacy">Termini e condizioni</a>
+    </nav>
+  </div>
+  <div class="page-shell inner-footer__legal footer-legal">
+    <span>© 2026 BlueBag Italia S.r.l. – Tutti i diritti riservati.</span>
+    <span>P.IVA 12345678900</span>
+    <a href="contatti.html#privacy">Privacy</a>
+    <a href="contatti.html#privacy">Termini e condizioni</a>
+    <a href="contatti.html">Accessibilità</a>
+    <a href="faq.html">Cookie</a>
+  </div>
+</footer>
+
   </div>
   <script src="assets/js/pages.js"></script>
 </body>

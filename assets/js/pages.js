@@ -7,6 +7,13 @@
       menu.setAttribute('aria-expanded', String(open));
       nav.classList.toggle('is-open', open);
     });
+
+    nav.addEventListener('click', (event) => {
+      if (event.target.closest('a') && window.matchMedia('(max-width: 760px)').matches) {
+        menu.setAttribute('aria-expanded', 'false');
+        nav.classList.remove('is-open');
+      }
+    });
   }
 
   document.querySelectorAll('[data-accordion-trigger]').forEach((trigger) => {
@@ -35,7 +42,13 @@
   filterClose?.addEventListener('click', () => setFilter(false));
   backdrop?.addEventListener('click', () => setFilter(false));
   document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape') setFilter(false);
+    if (event.key !== 'Escape') return;
+    setFilter(false);
+    if (menu && nav && nav.classList.contains('is-open')) {
+      menu.setAttribute('aria-expanded', 'false');
+      nav.classList.remove('is-open');
+      menu.focus();
+    }
   });
 
   document.querySelectorAll('form[data-demo-form]').forEach((form) => {
