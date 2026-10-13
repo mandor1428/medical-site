@@ -1,0 +1,232 @@
+:root {
+  --mm-motion-ease: cubic-bezier(.2,.75,.25,1);
+  --mm-motion-fast: 150ms;
+  --mm-motion-medium: 440ms;
+  --mm-motion-shadow: 0 12px 28px rgba(18, 55, 115, .14);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Click/tap feedback is attached progressively by motion.js. */
+.motion-press {
+  isolation: isolate;
+  overflow: hidden;
+  -webkit-tap-highlight-color: transparent;
+  transition:
+    transform var(--mm-motion-fast) var(--mm-motion-ease),
+    box-shadow 260ms var(--mm-motion-ease),
+    border-color 260ms ease,
+    background-color 260ms ease;
+}
+
+/* Added only when the control did not already have positioned layout rules. */
+.motion-ripple-host {
+  position: relative;
+}
+
+.motion-press:active,
+.motion-press.is-pressing {
+  transform: translateY(1px) scale(.975) !important;
+}
+
+.motion-ripple {
+  position: absolute;
+  z-index: 20;
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  pointer-events: none;
+  background: currentColor;
+  opacity: .18;
+  transform: translate(-50%, -50%) scale(0);
+  animation: mm-ripple 560ms ease-out forwards;
+}
+
+@keyframes mm-ripple {
+  55% { opacity: .14; }
+  to { opacity: 0; transform: translate(-50%, -50%) scale(var(--ripple-scale, 18)); }
+}
+
+/* One-time entrances: opacity and transform only, so no layout shift. */
+.motion-enhanced .motion-reveal:not(.is-visible) {
+  opacity: 0;
+  transform: translateY(14px) scale(.992);
+}
+
+.motion-reveal.is-visible {
+  animation: mm-reveal var(--mm-motion-medium) var(--mm-motion-ease) backwards;
+  animation-delay: calc(var(--motion-order, 0) * 55ms);
+}
+
+@keyframes mm-reveal {
+  from { opacity: 0; transform: translateY(14px) scale(.992); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.motion-hero-image {
+  transform-origin: center;
+  animation: mm-hero-settle 1100ms var(--mm-motion-ease) backwards;
+}
+
+.motion-hero-copy {
+  animation: mm-hero-copy 620ms var(--mm-motion-ease) backwards;
+  animation-delay: calc(90ms + var(--motion-order, 0) * 85ms);
+}
+
+@keyframes mm-hero-settle {
+  from { opacity: .7; transform: scale(1.035); filter: saturate(.9) brightness(1.06); }
+  to { opacity: 1; transform: scale(1); filter: saturate(1) brightness(1); }
+}
+
+@keyframes mm-hero-copy {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Dynamic states for existing interactive components. */
+.document-language-panel:not([hidden]) {
+  animation: mm-panel-in 300ms var(--mm-motion-ease) backwards;
+}
+
+.accordion-item.is-open .accordion-panel,
+.form-status.is-visible {
+  animation: mm-panel-in 320ms var(--mm-motion-ease) backwards;
+}
+
+@keyframes mm-panel-in {
+  from { opacity: 0; transform: translateY(-7px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.motion-pop {
+  animation: mm-pop 360ms var(--mm-motion-ease);
+}
+
+@keyframes mm-pop {
+  0%, 100% { transform: scale(1); }
+  45% { transform: scale(1.22); }
+}
+
+/* Hover depth and image polish apply only to devices with a real pointer. */
+@media (hover: hover) and (pointer: fine) {
+  .motion-press:hover {
+    transform: translateY(-2px);
+  }
+
+  :where(.btn, .primary-button, .secondary-button, .add-quote, .quote-link).motion-press:hover {
+    box-shadow: 0 9px 20px rgba(17, 57, 126, .2);
+  }
+
+  .motion-card {
+    transition:
+      transform 280ms var(--mm-motion-ease),
+      box-shadow 280ms var(--mm-motion-ease),
+      border-color 280ms ease,
+      background-color 280ms ease;
+  }
+
+  .motion-card:hover {
+    z-index: 2;
+    transform: translateY(-3px);
+    box-shadow: var(--mm-motion-shadow);
+  }
+
+  .motion-card img {
+    transition: filter 360ms ease;
+  }
+
+  .motion-card:hover img {
+    filter: saturate(1.06) contrast(1.025);
+  }
+
+  .motion-card :where(.line-icon, .category-icon, .faq-icon i, .card-arrow) {
+    transition: transform 280ms var(--mm-motion-ease), color 280ms ease;
+  }
+
+  .motion-card:hover :where(.line-icon, .category-icon, .faq-icon i) {
+    transform: translateY(-2px) scale(1.06);
+  }
+
+  .motion-card:hover .card-arrow,
+  .motion-press:hover > svg:last-child {
+    transform: translateX(3px);
+  }
+
+  .language.motion-press:hover,
+  .doc-type-tab.motion-press:hover,
+  .route-row.motion-press:hover {
+    border-color: #76b6ef;
+    background: #f1f8ff;
+  }
+}
+
+/* Navigation and form focus feel responsive without changing their geometry. */
+.primary-nav a {
+  position: relative;
+}
+
+.primary-nav a::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -7px;
+  left: 0;
+  height: 2px;
+  border-radius: 2px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 260ms var(--mm-motion-ease);
+}
+
+.primary-nav a:hover::after,
+.primary-nav a:focus-visible::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+:where(input, select, textarea):focus {
+  transition: border-color 180ms ease, box-shadow 180ms ease, background-color 180ms ease;
+  box-shadow: 0 0 0 4px rgba(8, 112, 236, .12);
+}
+
+.motion-press:focus-visible,
+.motion-card:focus-visible {
+  outline: 3px solid #0753bd;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto !important; }
+
+  .motion-reveal,
+  .motion-reveal.is-visible,
+  .motion-hero-image,
+  .motion-hero-copy,
+  .document-language-panel:not([hidden]),
+  .accordion-item.is-open .accordion-panel,
+  .form-status.is-visible,
+  .motion-pop {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .motion-ripple { display: none !important; }
+  .motion-press, .motion-card, .motion-card img { transition: none !important; }
+  .motion-press:active,
+  .motion-press.is-pressing,
+  .motion-card:hover,
+  .motion-card:hover img,
+  .motion-card:hover :where(.line-icon, .category-icon, .faq-icon i, .card-arrow),
+  .motion-press:hover > svg:last-child {
+    transform: none !important;
+  }
+
+  .primary-nav a::after {
+    transition: none !important;
+  }
+}

@@ -11,9 +11,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&amp;family=Source+Sans+3:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/pages.css">
-  <link rel="stylesheet" href="assets/css/portrait-pages.css">
+  <link rel="stylesheet" href="assets/css/portrait-pages.css?v=20261013-2">
   <link rel="stylesheet" href="assets/css/site-shell.css?v=20261013-3">
   <link rel="stylesheet" href="assets/css/readability.css?v=20261013-2">
+  <link rel="stylesheet" href="assets/css/motion.css?v=20261013-2">
   <style>
     .mepa-page .page-hero__photo picture,
     .mepa-page .page-hero__photo img,
@@ -23,6 +24,24 @@
     .mepa-step__art img,
     .multi-banner__art img { object-fit:cover; }
     .mepa-step__art { overflow:hidden; }
+    .mepa-page .excel-badge {
+      width:72px!important;
+      height:64px!important;
+      flex:0 0 72px;
+      display:grid;
+      place-items:center;
+      color:transparent!important;
+      background:transparent!important;
+      border-radius:0!important;
+      font-size:0!important;
+      line-height:0!important;
+    }
+    .mepa-page .excel-badge svg { display:block; width:72px; height:64px; overflow:visible; filter:drop-shadow(0 4px 5px rgba(16,80,52,.16)); }
+    .mepa-page .excel-badge .excel-sheet { fill:#fff; stroke:#a8cdbb; stroke-width:1.5; }
+    .mepa-page .excel-badge .excel-fold { fill:none; stroke:#a8cdbb; stroke-width:1.5; stroke-linejoin:round; }
+    .mepa-page .excel-badge .excel-grid { fill:none; stroke:#b7d7c6; stroke-width:1.35; }
+    .mepa-page .excel-badge .excel-logo-panel { fill:#107c41; }
+    .mepa-page .excel-badge .excel-x { fill:#fff; }
     @media (max-width:900px) {
       .mepa-page .page-hero__photo { height:auto!important; aspect-ratio:469/300; }
       .mepa-page .multi-banner__art { overflow:hidden; background:#dceefa; }
@@ -115,14 +134,13 @@
       </section>
 
       <section class="page-shell compact-panel multi-banner">
-        <div class="multi-banner__art clean-photo" aria-hidden="true"><img src="assets/img/mepa/codice-unico.webp" width="532" height="246" loading="lazy" decoding="async" alt=""></div>
+        <div class="multi-banner__art clean-photo" aria-hidden="true"><img src="assets/img/mepa/codice-unico-senza-checklist.png" width="1840" height="856" loading="lazy" decoding="async" alt=""></div>
         <div class="multi-banner__copy"><h2>Più prodotti,<br><span>un solo codice MePA</span></h2><p>Se acquisti più prodotti con lo stesso fornitore, possiamo aiutarti a utilizzare un unico codice MePA per semplificare la procedura e ridurre i passaggi.</p><a class="btn btn--outline" href="come-acquistare.html">Scopri come funziona <svg><use href="#i-arrow"></use></svg></a></div>
-        <div class="multi-banner__checks"><ul class="check-list"><li>Un solo codice MePA</li><li>Procedura più semplice</li><li>Meno passaggi amministrativi</li><li>Supporto dedicato</li></ul></div>
       </section>
 
       <section class="page-shell compact-panel excel-panel">
         <div><h2>Hai già un elenco prodotti?</h2><p>Puoi caricare il tuo elenco in formato Excel e ti aiutiamo a verificare i codici MePA, le disponibilità e la documentazione.</p><a class="btn btn--primary btn--wide" href="contatti.html"> <svg><use href="#i-upload"></use></svg>Carica il tuo elenco prodotti in Excel <svg><use href="#i-arrow"></use></svg></a></div>
-        <div class="excel-drop"><span class="excel-badge">X</span><div><strong>Formati supportati: .xlsx, .xls, .csv</strong><span>Verificheremo i prodotti e ti forniremo<br>i riferimenti MePA corretti.</span></div></div>
+        <div class="excel-drop"><span class="excel-badge" aria-hidden="true"><svg viewBox="0 0 72 64" focusable="false"><path class="excel-sheet" d="M25 4h39a4 4 0 0 1 4 4v48a4 4 0 0 1-4 4H25z"/><path class="excel-fold" d="M52 4v12h12"/><path class="excel-grid" d="M40 21h21M40 31h21M40 41h21M40 51h21M48 17v38M57 17v38"/><path class="excel-logo-panel" d="M5 14 40 8v48L5 50z"/><path class="excel-x" d="m15 25 5 8-5 8h6l3-5 3 5h6l-6-8 6-8h-6l-3 5-3-5z"/></svg></span><div><strong>Formati supportati: .xlsx, .xls, .csv</strong><span>Verificheremo i prodotti e ti forniremo<br>i riferimenti MePA corretti.</span></div></div>
       </section>
     </main>
 
@@ -181,5 +199,6 @@
 
   </div>
   <script src="assets/js/pages.js"></script>
+  <script src="assets/js/motion.js?v=20261013-2"></script>
 </body>
 </html>

@@ -444,7 +444,13 @@
 .excel-panel p { margin: 4px 0 10px; color: #3f5989; font-size: 14px; line-height: 1.3; }
 .excel-panel .btn { min-height: 42px; font-size: 12px; }
 .excel-drop { min-height: 105px; padding: 14px; display: flex; align-items: center; justify-content: center; gap: 18px; border: 1px dashed #95bbe0; border-radius: 7px; }
-.excel-badge { width: 54px; height: 64px; display: grid; place-items: center; color: #fff; background: #13a655; border-radius: 5px; font-family: Poppins,sans-serif; font-size: 29px; font-weight: 700; }
+.excel-badge { width: 72px; height: 64px; flex: 0 0 72px; display: grid; place-items: center; }
+.excel-badge svg { display: block; width: 72px; height: 64px; overflow: visible; filter: drop-shadow(0 4px 5px rgba(16, 80, 52, .16)); }
+.excel-badge .excel-sheet { fill: #fff; stroke: #a8cdbb; stroke-width: 1.5; }
+.excel-badge .excel-fold { fill: none; stroke: #a8cdbb; stroke-width: 1.5; stroke-linejoin: round; }
+.excel-badge .excel-grid { fill: none; stroke: #b7d7c6; stroke-width: 1.35; }
+.excel-badge .excel-logo-panel { fill: #107c41; }
+.excel-badge .excel-x { fill: #fff; }
 .excel-drop strong, .excel-drop span { display: block; }
 .excel-drop strong { font-size: 12px; }
 .excel-drop span { color: #526b96; font-size: 11px; line-height: 1.4; }
@@ -487,7 +493,7 @@
   .mepa-page .multi-banner { width: calc(100% - 48px); }
   .mepa-page .multi-banner__checks { background: #fff; }
   .mepa-page .excel-panel { width: calc(100% - 56px); min-height: 171px; }
-  .mepa-page .excel-drop .excel-badge { color: #fff; font-size: 28px; line-height: 1; }
+  .mepa-page .excel-drop .excel-badge { width: 72px; height: 64px; }
   .mepa-page .inner-footer { min-height: 152px; }
 
   .buy-page .page-hero { height: 189px; }
